@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Formulario Juan Valdes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+
+    <header>
+        <div class="head">
+            <div class="item">Formulario</div>
+        </div>
+    </header>
+    <br>
+    <main>
+        <form class= "form">
+            <div class="mid">
+                <label class="nuno" for="nombre">Nombre: </label>
+                <br>
+                <br>
+                <input class="input"  id="nombre" type="text" name="nombre" placeholder="Escribe tu nombre" required>
+                <br>
+                <br>
+                <label class="nuno"  for="apellido">Apellido: </label>
+                <br>
+                <br>
+                <input id="apellido" class= "input" type="text" name="apellido" placeholder="Escribe tu apellido" required>
+                <br>
+                <br>    
+                <label class="nuno" for="edad">Edad: </label>
+                <br>
+                <br>
+                <input id="edad" class="input"  type="number" name="edad" placeholder="Inserte edad" required>
+                <br>
+                <br>
+                <label class="nuno" for="semanas">Semanas de emabarazo: </label>
+                <br>
+                <br>
+                <input id="semanas" class="input" type="number" max="39" placeholder="Inserte semanas de embarazo" required>
+                <br>
+                <br>
+                <label class="nuno" for="fecha">Fecha de la ultima menstruacion: </label>
+                <br>
+                <br>
+                <input id="fecha" class="input" type="date" required>
+                <br>
+                <br>
+                <div id="respiratorio">
+                <br>
+                    <label class="nuno" for="respiratrio">Has tenido sintomas respiratorios los ultimos 15 días?: </label>
+                    <br>
+                    <label class="input" for="si">Si</label>
+                    <input id="si" type="radio" value="si">
+                    <label class="input" for="no">No</label>
+                    <input id="no" type="radio" value="no">
+                </div>
+                <br>
+                <br>
+            </div>
+
+            <div class="end">
+                <label class="nuno" for="numero">Numero de telefono</label>
+                <br>
+                <br>
+                <input class="input" type="tel" name="numero" id="numero" required placeholder="Inserte numero telefonico">
+                <button class="boton" type="submit" onclick="return Confirm()">Enviar</button>
+                <button class="boton" type="reset">Restablecer</button>
+                <br>
+            </div>
+
+            <div class="img">
+				<button class="boton" onclick="fotofuncion()">Ver imagen.</button>
+                <br>
+                <br>
+                <script src="imagen.js">
+                    function fotofuncion() {
+                    document.getElementById('mifoto').src='Act1\\imagen.jpg';
+                    }
+                </script>
+				<img id="mifoto" src="" style="width: 400px;">
+            </div>
+        </form>
+
+
+        <footer>
+            <p id="pie">Juan Valdes. 30.342.229 - Formulario Beta.1
+            </p>
+            <p id="vigencia"></p>
+            <script>
+                var fecha = new Date();
+                var ano = fecha.getFullYear();
+                var mes = fecha.getMonth();
+
+                document.getElementById("vigencia").innerHTML = ('Mes ' +mes + ' del ' +ano);
+            </script>
+        </footer>
+
+
+    </main>
